@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Aplica esta clase a tu contenedor de descripción */
+.description {
+    display: -webkit-box;              /* Usamos un box modelo flexible */
+    -webkit-line-clamp: 2;             /* Limita a 3 líneas de texto */
+    -webkit-box-orient: vertical;      /* Orienta el contenido del box de manera vertical */
+    overflow: hidden;                  /* Oculta cualquier contenido que desborde */
+    text-overflow: ellipsis;           /* Aplica '...' al final del contenido desbordado */
+    height: 1.8rem;                    /* Ajusta según el tamaño de las líneas */
+}
