@@ -19,7 +19,7 @@ const ItemsList = () => {
     useEffect(() => {
         const fetchItems = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/items', {
+                const response = await axios.get('https://vercel-deploy-crud-eugh.vercel.app/api/items', {
                     params: {
                         page: currentPage,
                         limit: itemsPerPage,
@@ -60,7 +60,7 @@ const ItemsList = () => {
     const handleShowItemDetails = async (_id) => {
         try {
             console.log("Requesting details for item ID:", _id);
-            const response = await axios.get(`http://localhost:3000/api/items/${_id}`);
+            const response = await axios.get(`https://vercel-deploy-crud-eugh.vercel.app/api/items/${_id}`);
             setSelectedItem(response.data);
             setShowModal(true);
         } catch (error) {
@@ -82,7 +82,7 @@ const ItemsList = () => {
                 console.error('No se encontró el userId');
                 return;
             }
-            await axios.post('http://localhost:3000/api/cart/add-to-cart', {
+            await axios.post('https://vercel-deploy-crud-eugh.vercel.app/api/cart/add-to-cart', {
                 userId,
                 itemId,
                 quantity: 1

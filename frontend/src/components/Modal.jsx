@@ -24,7 +24,7 @@ const Modal = ({ onClose }) => {
 
             // Crear un array de promesas para cada solicitud a la API
             const productPromises = idProducts.map(id =>
-                axios.get(`http://localhost:3000/api/items/${id}`)
+                axios.get(`https://vercel-deploy-crud-eugh.vercel.app/api/items/${id}`)
                     .then(response => response.data)
                     .catch(error => {
                         console.error(`Error al obtener el producto ${id}:`, error);

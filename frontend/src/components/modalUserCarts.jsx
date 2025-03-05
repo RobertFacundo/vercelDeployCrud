@@ -22,7 +22,7 @@ const ModalUserCarts = ({ userId, onClose }) => {
     useEffect(() => {
         const fetchUserCart = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/cart/${userId}`);
+                const response = await axios.get(`https://vercel-deploy-crud-eugh.vercel.app/api/cart/${userId}`);
                 setCart(response.data)
             } catch (error) {
                 console.error('Error al obtener cart', error.message)
@@ -45,7 +45,7 @@ const ModalUserCarts = ({ userId, onClose }) => {
 
             // Crear un array de promesas para cada solicitud a la API
             const productPromises = idProducts.map(id =>
-                axios.get(`http://localhost:3000/api/items/${id}`)
+                axios.get(`https://vercel-deploy-crud-eugh.vercel.app/api/items/${id}`)
                     .then(response => response.data)
                     .catch(error => {
                         console.error(`Error al obtener el producto ${id}:`, error);
