@@ -18,13 +18,13 @@ const Home = () => {
     useEffect(() => {
         const fetchUsersWithCart = async () => {
             try {
-                const usersResponse = await axios.get('https://vercel-deploy-crud-eugh.vercel.app/api/users');
+                const usersResponse = await axios.get('https://vercel-deploy-crud.vercel.app/api/users');
                 const users = usersResponse.data;
                 const filteredUsers = [];
 
                 for (const u of users) {
                     try {
-                        const cartResponse = await axios.get(`https://vercel-deploy-crud-eugh.vercel.app/api/cart/${u._id}`);
+                        const cartResponse = await axios.get(`https://vercel-deploy-crud.vercel.app/api/cart/${u._id}`);
                         const cart = cartResponse.data; // Ya no accedemos a items, sino directamente a cart
 
                         if (cart && cart.length > 0) {
