@@ -6,7 +6,7 @@ export default defineConfig({
     outDir: 'frontend/dist',
     emptyOutDir: true,
     rollupOptions: {
-      input: 'frontend/index.html',  // Ruta relativa al archivo 'index.html' ahora que está en la raíz
+      input: 'index.html',  // Ruta relativa al archivo 'index.html' ahora que está en la raíz
     },
   },
   plugins: [react()],
