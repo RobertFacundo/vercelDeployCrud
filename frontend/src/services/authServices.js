@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'https://vercel-deploy-crud-eugh.vercel.app/api/users';
+const API_URL = 'https://vercel-deploy-crud.vercel.app/api/users';
 
 export const authService = async (action, data) => {
     try {
